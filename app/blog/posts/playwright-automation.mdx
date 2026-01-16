@@ -1,0 +1,31 @@
+---
+title: 'Architecting Reliability: E2E Testing with Playwright & GitHub Actions'
+publishedAt: '2026-01-17'
+summary: 'How I implemented a robust E2E test suite achieving 80% coverage and blocking regressions before merge.'
+---
+
+In the fast-paced world of software development, the gap between "it works on my machine" and "it works in production" is often where bugs hide. [cite_start]As a Software Engineer specializing in Test Automation[cite: 64, 73], I believe that rigorous automated testing is not just a safety net—it's a productivity multiplier.
+
+[cite_start]In a recent project for the University of Adelaide, I architected an End-to-End (E2E) test suite using **Playwright (Python)** to validate critical user flows for an LMS Alert System[cite: 80]. Here is how I approached the challenge.
+
+## The Strategy: Blocking Regressions Early
+
+[cite_start]The goal was simple: ensure system reliability under high concurrency while shortening the feedback loop[cite: 71, 83]. [cite_start]To achieve this, I integrated the test suite directly into **GitHub Actions**[cite: 80].
+
+This CI/CD integration served as a strict gatekeeper. No code could be merged unless it passed the full battery of tests. This approach significantly reduced the risk of introducing regressions into the main branch.
+
+## Why Playwright with Python?
+
+[cite_start]While many frontend teams use Playwright with TypeScript, leveraging **Playwright with Python** allowed for seamless integration with our backend stack (FastAPI)[cite: 74, 99].
+
+Key benefits included:
+* **Unified Language:** Writing tests in the same language as the backend reduced context switching.
+* [cite_start]**Pytest Ecosystem:** We leveraged `pytest` to orchestrate test execution, allowing us to use fixtures for setup/teardown of database states[cite: 73, 83].
+
+## Achieving 80% Coverage
+
+Quantity doesn't always equal quality, but coverage metrics are a useful health indicator. [cite_start]By championing **Test-Driven Development (TDD)** practices[cite: 83], we achieved over 80% unit test coverage. [cite_start]We verified not just the "happy paths" but also edge cases and error handling logic, particularly for the NLP/LLM microservices ingestion layer[cite: 84].
+
+## Conclusion
+
+Building a scalable test architecture requires more than just writing scripts; it requires a cultural shift towards quality engineering. [cite_start]By automating the verification of user flows and API contracts (using Postman)[cite: 84], we successfully delivered a system that teaching staff could rely on for real-time alerts.
