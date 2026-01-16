@@ -1,3 +1,4 @@
+// app/layout.tsx
 import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
@@ -11,15 +12,15 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Gengchao Yang | Software Engineer',
+    template: '%s | Gengchao Yang',
   },
-  description: 'This is my portfolio.',
+  description: 'Backend & Test Automation Engineer specializing in building scalable, real-time systems and engineering quality through rigorous automated testing.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Gengchao Yang Portfolio',
+    description: 'Backend & Test Automation Engineer with strong full-stack capabilities (Python, React).',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Gengchao Yang Portfolio',
     locale: 'en_US',
     type: 'website',
   },
