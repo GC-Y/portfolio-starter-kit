@@ -7,11 +7,7 @@ export default function Page() {
         My Portfolio
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`I'm Gengchao Yang, a Software Engineer specializing in Test Automation, Backend, and Cloud-Native systems. I possess strong full-stack capabilities with Python and React, focusing on building scalable, real-time architectures. My engineering philosophy centers on quality through Test-Driven Development (TDD) and robust CI/CD pipelines, aiming to shorten the feedback loop from development to deployment.`}
       </p>
       <div className="my-8">
         <BlogPosts />
