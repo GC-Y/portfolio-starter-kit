@@ -1,0 +1,29 @@
+---
+title: 'Bridging the Gap: From React Frontend to Kubernetes Backend'
+publishedAt: '2025-12-28'
+summary: 'My experience deploying scalable microservices and ensuring zero-downtime with Kubernetes.'
+---
+
+Modern software engineering is rarely just about writing code; it's about delivering a complete, deployable service. [cite_start]As a developer with strong full-stack capabilities, I often find myself bridging the gap between unified frontend experiences and robust cloud-native backends[cite: 70].
+
+## The Cloud-Native Backend
+
+[cite_start]In my recent work, I focused on deploying scalable microservices on **Kubernetes (K8s)**[cite: 85]. One of the critical aspects of this deployment was ensuring high availability.
+
+[cite_start]To achieve this, I configured **liveness and readiness probes**[cite: 85].
+* **Liveness Probes:** Restart containers that have crashed or deadlocked.
+* **Readiness Probes:** Ensure traffic is only sent to pods that are actually ready to process requests.
+
+This configuration was crucial for supporting **zero-downtime deployments**, allowing us to update the application without interrupting active users.
+
+## Frontend Integration
+
+A robust backend needs a capable frontend. [cite_start]I utilize **React.js** to build interactive dashboards that consume these microservices[cite: 75, 81]. Understanding the infrastructure—how Docker containers are orchestrated and how Nginx routes traffic—helps me write better frontend code that handles network states, timeouts, and reconnects gracefully.
+
+## Observability
+
+Deploying to the cloud brings new challenges in debugging. [cite_start]My background in application support [cite: 86] taught me the value of observability. [cite_start]I rely on tools like **Prometheus and Grafana** [cite: 76] [cite_start]to monitor system health, and I use **Chrome DevTools** extensively to diagnose complex network issues[cite: 73, 89].
+
+## Final Thoughts
+
+Full-stack development in 2026 implies more than just knowing React and Python. It encompasses the entire lifecycle of the application, from the `git push` that triggers a CI/CD pipeline to the Kubernetes pod serving the final response.
