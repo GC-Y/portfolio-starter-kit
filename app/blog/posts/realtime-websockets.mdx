@@ -1,0 +1,29 @@
+---
+title: 'Engineered for Speed: Managing <100ms Latency in WebSocket Apps'
+publishedAt: '2026-01-10'
+summary: 'Deep dive into building a real-time EEG command streaming system using FastAPI and WebSockets.'
+---
+
+Latency is the enemy of real-time interaction. [cite_start]When building the **NeuroFlip Reader**, a system designed to control eBook interfaces via mental commands[cite: 93], we faced a strict requirement: the delay between a brain signal and the UI response had to be imperceptible.
+
+## The Challenge: <100ms Latency
+
+[cite_start]The system needed to stream EEG mental commands to a web client with less than **100ms latency**[cite: 96]. Standard REST APIs were insufficient for this continuous stream of data. We needed a persistent, bi-directional communication channel.
+
+## The Solution: Asyncio and WebSockets
+
+[cite_start]I designed an asynchronous, event-driven backend using **FastAPI** and **WebSockets**[cite: 96, 99].
+
+### 1. Asynchronous Core
+Python's `asyncio` library was the backbone of our performance strategy. It allowed the backend to handle multiple concurrent connections and data streams without blocking the main execution thread.
+
+### 2. Strict Data Validation
+Speed is dangerous without control. [cite_start]To ensure the integrity of the data flowing between the backend and the React frontend, I utilized **Pydantic schemas**[cite: 98]. This enforced strict data typing at runtime. If a malformed packet arrived, it was rejected immediately, preventing runtime errors on the client side and ensuring the system remained robust.
+
+## Visualizing the Data
+
+[cite_start]On the frontend, I built a **React dashboard** to visualize this data in real-time[cite: 81]. [cite_start]Using WebSocket hooks, the UI updated instantly as new statistical data arrived from the backend[cite: 82].
+
+## Conclusion
+
+High-performance Python is not an oxymoron. With the right architecture—combining FastAPI, WebSockets, and rigorous data validation—we created a seamless bridge between biological signals and digital interfaces.
