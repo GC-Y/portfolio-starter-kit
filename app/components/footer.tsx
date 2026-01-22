@@ -32,15 +32,25 @@ export default function Footer() {
           </a>
         </li>
         <li>
-          {/* 请将下方的 href 替换为你自己的 GitHub 个人主页链接 */}
           <a
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/GC-Y" 
+            href="https://github.com/GC-Y"
           >
             <ArrowIcon />
             <p className="ml-2 h-7">github</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/gengchao-yang/"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">linkedin</p>
           </a>
         </li>
       </ul>
